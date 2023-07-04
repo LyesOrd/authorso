@@ -2,10 +2,10 @@
   <div :class="{dark: darkMode}">
     <div class="header">
       <img id="logoPage" alt="Vue logo" src="./assets/online_shopping.jpg">
-      <DarkToogle @toggle-dark-mode="toggleDarkMode" />
+      <DarkToogle :darkMode="darkMode" @toggle-dark-mode="toggleDarkMode" />
     </div>
     
-    <Home msg="Author.so"/>
+    <Home msg="Clothes.so"/>
     <SearchClothes msg="Chercher votre vêtement"/>
   </div>
 </template>
@@ -36,6 +36,7 @@ export default {
 </script>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -60,7 +61,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-
+  margin: 0;
+  padding: 0;
 
 }
 </style>

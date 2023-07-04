@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h4>
-      Site dédiée à la récupération des vétêments et accessoires de mode
+      Copipez l'url d'un vêtement de la boutique en ligne sf-clothes pour avoir les informations de ce vêtement
     </h4>
   </div>
 </template>
