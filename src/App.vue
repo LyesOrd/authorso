@@ -1,16 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div :class="{dark: darkMode}">
+    <div class="header">
+      <img id="logoPage" alt="Vue logo" src="./assets/online_shopping.jpg">
+      <DarkToogle @toggle-dark-mode="toggleDarkMode" />
+    </div>
+    
+    <Home msg="Author.so"/>
+    <SearchClothes msg="Chercher votre vêtement"/>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Home from './components/Home.vue'
+import SearchClothes from './components/SearchClothes.vue'
+import DarkToogle from './components/DarkToogle.vue'
 
 export default {
+  data() {
+    return {
+      darkMode: false,
+    }
+  },
   name: 'App',
   components: {
-    HelloWorld
-  }
+    Home,
+    SearchClothes,
+    DarkToogle,
+  },
+  methods: {
+    toggleDarkMode() {
+      this.darkMode = !this.darkMode;
+    },
+  },
 }
 </script>
 
@@ -21,6 +42,25 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#logoPage{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.dark {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+
 }
 </style>
