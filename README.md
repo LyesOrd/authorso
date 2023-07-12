@@ -33,6 +33,8 @@ npm i
 ```bash
 npm run serve
 ```
+Lien de test pour récupérer les infos d'un vêtement :
+`https://sf-clothes-api.ld-web.net/api/products/4`
 
 ## Angular ou VueJS ?
 
