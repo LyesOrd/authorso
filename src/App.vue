@@ -7,6 +7,7 @@
     
     <Home msg="Clothes.so"/>
     <SearchClothes msg="Chercher votre vêtement"/>
+    <FooterComponent :darkMode="darkMode" />
   </div>
 </template>
 
@@ -14,6 +15,7 @@
 import Home from './components/Home.vue'
 import SearchClothes from './components/SearchClothes.vue'
 import DarkToogle from './components/DarkToogle.vue'
+import FooterComponent from './components/FooterComponent.vue'
 
 export default {
   data() {
@@ -26,6 +28,7 @@ export default {
     Home,
     SearchClothes,
     DarkToogle,
+    FooterComponent,
   },
   methods: {
     toggleDarkMode() {
